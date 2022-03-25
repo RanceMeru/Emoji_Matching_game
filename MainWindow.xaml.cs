@@ -54,16 +54,16 @@ namespace Headfirst_part_1
 
             Random random = new Random();
             {
-                foreach (TextBlock textblock in mainGrid.Children.OfType<TextBlock>())
+                foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
                    
                 {
-                    if (textblock.Name != "timeTextBlock")
+                    if (textBlock.Name != "timeTextBlock")
 
                     {
-                        textblock.Visibility = Visibility.Visible;
+                        textBlock.Visibility = Visibility.Visible;
                         int index = random.Next(animalEmoji.Count);
                         string nextEmoji = animalEmoji[index];
-                        textblock.Text = nextEmoji;
+                        textBlock.Text = nextEmoji;
                         animalEmoji.RemoveAt(index);
                     }
                 }
