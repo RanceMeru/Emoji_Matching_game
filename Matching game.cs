@@ -11,6 +11,7 @@ namespace Headfirst_part_1
 
     public partial class MainWindow : Window
     {
+    // this will be creating a timer object that we can use later along with our matches in our matching game.
         DispatcherTimer timer = new DispatcherTimer();
         int tenthsOfSecondElapsed;
         int matchesFound;
@@ -24,7 +25,7 @@ namespace Headfirst_part_1
         }
 
         private void Timer_Tick(object sender, EventArgs e)
-        {
+        {//the timer will stop when we have found 8 matches which is all the possible matches acailable.
             tenthsOfSecondElapsed++;
             timeTextBlock.Text = (tenthsOfSecondElapsed / 10F).ToString("0.0s");
             if (matchesFound == 8)
@@ -51,6 +52,7 @@ namespace Headfirst_part_1
                 "🦘","🦘",
                 "🦔","🦔",
             };
+            //will make a random configuration
 
             Random random = new Random();
             {
@@ -68,6 +70,7 @@ namespace Headfirst_part_1
                     }
                 }
             }
+            //will start the timer only when we begin 
             timer.Start();
             tenthsOfSecondElapsed = 0;
             matchesFound = 0;
