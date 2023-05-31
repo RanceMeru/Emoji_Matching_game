@@ -11,7 +11,11 @@ namespace Headfirst_part_1
 
     public partial class MainWindow : Window
     {
+<<<<<<< HEAD:MainWindow.xaml.cs
         //Creating a timer object and we will assign it to the xaml later
+=======
+    // this will be creating a timer object that we can use later along with our matches in our matching game.
+>>>>>>> 522f8563cd654ed18a548e13b196382918b80420:Matching game.cs
         DispatcherTimer timer = new DispatcherTimer();
         int tenthsOfSecondElapsed;
         int matchesFound;
@@ -25,8 +29,12 @@ namespace Headfirst_part_1
         }
 
         private void Timer_Tick(object sender, EventArgs e)
+<<<<<<< HEAD:MainWindow.xaml.cs
         {
             //making the timer increase in an invterval
+=======
+        {//the timer will stop when we have found 8 matches which is all the possible matches acailable.
+>>>>>>> 522f8563cd654ed18a548e13b196382918b80420:Matching game.cs
             tenthsOfSecondElapsed++;
 
             timeTextBlock.Text = (tenthsOfSecondElapsed / 10F).ToString("0.0s");
@@ -54,6 +62,7 @@ namespace Headfirst_part_1
                 "🦘","🦘",
                 "🦔","🦔",
             };
+            //will make a random configuration
 
             //creates a project named random
             Random random = new Random();
@@ -72,6 +81,7 @@ namespace Headfirst_part_1
                     }
                 }
             }
+            //will start the timer only when we begin 
             timer.Start();
             tenthsOfSecondElapsed = 0;
             matchesFound = 0;
