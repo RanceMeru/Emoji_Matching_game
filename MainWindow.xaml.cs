@@ -11,6 +11,7 @@ namespace Headfirst_part_1
 
     public partial class MainWindow : Window
     {
+        //Creating a timer object and we will assign it to the xaml later
         DispatcherTimer timer = new DispatcherTimer();
         int tenthsOfSecondElapsed;
         int matchesFound;
@@ -25,7 +26,9 @@ namespace Headfirst_part_1
 
         private void Timer_Tick(object sender, EventArgs e)
         {
+            //making the timer increase in an invterval
             tenthsOfSecondElapsed++;
+
             timeTextBlock.Text = (tenthsOfSecondElapsed / 10F).ToString("0.0s");
             if (matchesFound == 8)
             {
@@ -52,6 +55,7 @@ namespace Headfirst_part_1
                 "🦔","🦔",
             };
 
+            //creates a project named random
             Random random = new Random();
             {
                 foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
